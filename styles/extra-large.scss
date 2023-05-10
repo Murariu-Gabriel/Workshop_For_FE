@@ -1,0 +1,15 @@
+@use "../styles/base" as *;
+
+@use "../styles/color" as *;
+
+@use "../styles/spacings" as *;
+
+@use "../styles/typography" as *;
+
+@use "../styles/mixins" as *;
+
+@media screen and (max-width: 1400px) {
+    .container{
+        width: 1400px;
+    }
+}

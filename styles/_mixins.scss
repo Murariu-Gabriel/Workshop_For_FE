@@ -1,0 +1,57 @@
+
+
+// $list: (
+// "image-deep-earth",
+//  "image-night-arcade",   
+//  "image-soccer-team",
+//  "image-grid",
+//  "image-from-above",
+//  "image-pocket-borealis",
+//  "image-curiosity",
+//  "image-fisheye",
+// );
+
+$list:"deep-earth","night-arcade","soccer-team","grid","from-above","pocket-borealis","curiosity","fisheye";
+
+
+@mixin images($screen) {
+
+    @for $i from 1 through 8{
+        &:nth-of-type(#{$i}){
+            $image: nth($list, $i);
+            background-image: url("../images/#{$screen}/image-#{$image}.jpg");
+        }
+    } 
+
+    // &:nth-of-type(1){
+    //     background-image: url("/images/mobile/image-deep-earth.jpg");
+    // }
+
+    // &:nth-of-type(2){
+    //     background-image: url("/images/mobile/image-night-arcade.jpg");
+    // }
+
+    // &:nth-of-type(3){
+    //     background-image: url("/images/mobile/image-soccer-team.jpg");
+    // }
+
+    // &:nth-of-type(4){
+    //     background-image: url("/images/mobile/image-grid.jpg");
+    // }
+
+    // &:nth-of-type(5){
+    //     background-image: url("/images/mobile/image-from-above.jpg");
+    // }
+
+    // &:nth-of-type(6){
+    //     background-image: url("/images/mobile/image-pocket-borealis.jpg");
+    // }
+
+    // &:nth-of-type(7){
+    //     background-image: url("/images/mobile/image-curiosity.jpg");
+    // }
+
+    // &:nth-of-type(8){
+    //     background-image: url("/images/mobile/image-fisheye.jpg");
+    // }
+}

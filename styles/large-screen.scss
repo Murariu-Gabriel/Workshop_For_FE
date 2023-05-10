@@ -1,0 +1,124 @@
+@use "../styles/base" as *;
+
+@use "../styles/color" as *;
+
+@use "../styles/spacings" as *;
+
+@use "../styles/typography" as *;
+
+@use "../styles/mixins" as *;
+
+
+@media screen and (min-width: 990px) {
+    .container{
+        width: 900px;
+        padding: 0;
+        margin: 0 auto;
+    }
+    
+    .hero{
+        height: 650px;
+        nav{
+            display: block;
+
+            ul{
+                display: flex;
+                gap: $baseSpacing;
+               
+                
+                a{
+                    cursor: pointer;
+                    padding-bottom: 10px;
+                    position: relative;
+
+
+                    &:hover{
+                        &::after{
+                            content: "";
+                            width: 50%;
+                            height: 2px;
+                            background-color: $white;
+                            position: absolute;
+                            bottom: 0;
+                            transform: translateX(-50% -50%);
+                            left: 30%;
+                        }
+                    }
+                }
+            }
+        }
+
+        button{
+            display: none;
+        }
+
+        h1{
+            width: 50%;
+            transform: translateY(-25%);
+        }
+    }
+
+    .interaction{
+        .container{
+            position: relative;
+        }
+
+        img{
+            margin: 0;
+        }
+
+        h2{
+            margin: 0;
+            padding: 0;
+            padding-bottom: $baseSpacing;
+        }
+
+        .text{
+            position: absolute;
+            background-color: $white;
+            padding: $baseSpacing;
+            padding-left: $xlSpacing;
+            text-align: left;
+            width: 50%;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .creation{
+        .container{
+            position: relative;
+            align-items: flex-start;
+
+            .articleList{
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            button{
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    footer{
+        .container{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            justify-content: flex-end;
+        }
+
+        nav{
+            justify-self: end;
+            ul{
+                flex-direction: row;
+            }
+        }
+
+        p{
+            justify-self: end;
+        }
+    }
+}

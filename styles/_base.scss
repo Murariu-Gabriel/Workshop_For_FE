@@ -1,0 +1,36 @@
+@use "spacings" as *;
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    padding: 0 $containerSpacing;
+}
+
+img{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
